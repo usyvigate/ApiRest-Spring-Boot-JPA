@@ -2,16 +2,12 @@ package com.ApiRest.Entitys;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "Alumno")
-@Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Alumno {
@@ -28,11 +24,74 @@ public class Alumno {
     private String correo;
     @Column(name = "TELEFONO")
     private String telefono;
+    @Column(name = "CARRERA")
+    private String carrera;
     @Column(name = "MATRICULA")
     private String matricula;
     @Column(name = "PROMEDIO", precision = 4, scale = 4, nullable = false)
     private BigDecimal promedio;
 
+    public Long getIdAlumno() {
+        return idAlumno;
+    }
 
+    public void setIdAlumno(Long idAlumno) {
+        this.idAlumno = idAlumno;
+    }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
+    public BigDecimal getPromedio() {
+        return promedio;
+    }
+
+    public void setPromedio(BigDecimal promedio) {
+        this.promedio = promedio;
+    }
+
+    public String getCarrera() {
+        return carrera;
+    }
+
+    public void setCarrera(String carrera) {
+        this.carrera = carrera;
+    }
 }
