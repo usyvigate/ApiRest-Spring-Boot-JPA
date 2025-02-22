@@ -47,4 +47,5 @@ public class ControllerBasic {
         repositoryAlumno.delete(deleteAlumno);
         return "Eliminado";
     }
+
 }
